@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="ns"/>
+    <arg name="type"/>
+    <arg name="args"/>
+
+  <node ns="$(arg ns)" pkg="rosbag" type="$(arg type)" name="$(arg type)" output="screen" args="$(arg args)"/>
+  
+</launch>
