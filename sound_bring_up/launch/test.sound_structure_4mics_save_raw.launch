@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="ns" default="amr"/>
+
+  <include file="$(find sound_bring_up)/launch/common.sound_structure.launch">
+    <arg name="ns" value="$(arg ns)" />
+    <arg name="config_file" value="global_2D_4mics"/>
+    <arg name="enable_saver" value="true"/>
+  </include>
+
+</launch>

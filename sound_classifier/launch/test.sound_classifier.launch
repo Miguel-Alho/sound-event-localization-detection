@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- Arguments ================================================================ -->
+
+  <arg name="ns" default="amr"/>
+  <arg name="sim_enabled" default="true" />
+
+  <!-- Simulation =============================================================== -->
+
+  <!-- <include if="$(eval arg('sim_enabled') and not arg('fake'))" file="$(find amr_common)/launch/common.simulation.launch">
+    <arg name="gazebo_world" value="$(find amr_gazebo)/worlds/autoeuropa/autoeuropa.spawn.urdf.xacro" />
+    <arg name="paused" value="true"/>
+  </include> -->
+
+  <include file="$(find sound_classifier)/launch/node.sound_classifier.launch">
+    <arg name="ns" value="$(arg ns)" />
+    <!-- <arg name="urdf" value="$(find amr_gazebo)/models/part_1k0_199_555/part_1k0_199_555.spawn.urdf.xacro" />
+    <arg name="sim_enabled" value="$(arg sim_enabled)" />
+    <arg name="collision_only" value="false" />
+    <arg name="visual_type" value="0" />
+    <arg name="collision_type" value="0" />
+    <arg name="fake_joints" value="true" /> -->
+  </include>
+
+  <!-- Rviz ======================================================================-->
+<!-- 
+  <include file="$(find amr_common)/launch/node.rviz.launch">
+    <arg name="rviz_file" value="$(find kr_robots_planner)/rviz/test.kr2_a1410.planner.rviz" />
+  </include> -->
+
+
+</launch>

@@ -1,0 +1,62 @@
+sound_tools:
+  mics:
+    - id: 'mic1'
+      x: -0.4
+      y: -0.4
+      z: 0.4
+      rx: 0.0
+      ry: 0.0
+      rz: -0.9238795
+      rw: 0.3826834
+    - id: 'mic2'
+      x: -0.4
+      y: 0.4
+      z: 0.0
+      rx: 0.0
+      ry: 0.0
+      rz: 0.9238795
+      rw: 0.3826834
+    - id: 'mic3'
+      x: 0.4
+      y: 0.4
+      z: 0.4
+      rx: 0.0
+      ry: 0.0
+      rz: 0.3826834
+      rw: 0.9238795
+    - id: 'mic4'
+      x: 0.4
+      y: -0.4
+      z: 0.0
+      rx: 0.0
+      ry: 0.0
+      rz: -0.3826834
+      rw: 0.9238795
+  # sound_generator:
+  sound_sources:
+    - file: '500Hz.wav' # clearthroat002 speech019 500Hz
+      type: 'speaker'
+      x: 2
+      y: 0
+      z: 0
+    # - file: '800Hz.wav'
+    #   type: 'speaker'
+    #   x: 2
+    #   y: 1
+    #   z: 0
+    # - file: '100652-3-0-0.wav' # dog_bark
+    #   type: 'speaker'
+    #   x: 6.0
+    #   y: 3.0
+    #   z: 0.0
+    # - file: 'dev_1_ebr_0_nec_5_poly_1.wav' # compilation
+    #   type: 'speaker'
+    #   x: 6.0
+    #   y: 3.0
+    #   z: 0.0
+    # - file: 'audio_concatenated.wav' # compilation
+    #   type: 'speaker'
+    #   x: 6.0
+    #   y: 3.0
+    #   z: 0.0
+        

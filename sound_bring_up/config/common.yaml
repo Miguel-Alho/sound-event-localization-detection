@@ -1,0 +1,28 @@
+sound_tools:
+  room: 'living_room'
+  sample_rate: 44100
+  frequency: 1
+  freq_range: [0, 4000]
+  frame_size: 2048
+  hop_length: 1024
+  data_num: 20
+  room_size: [8, 8, 2]
+  # min_energy_threshold: 0.01
+  min_amp_ratio_threshold: 0.05 # it means all amplitudes below min_amp_ratio_threshold*100% of max stft aplitude will be discarded, to clean the spectrogram and remove possible noise before classifying
+  min_amp_threshold: 0.0001 #0.001
+  # min_amp_dif_threshold: 0.0001 #0.0001 0.05 # minimum difference of amplitude between microphones (if is too low the sound source is too far away)
+  mic_area_threshold: 0.3 # distance outside mics area that also does not count
+  dist_threshold: 1.5 #0.8 # if distance between 2 sound sources estimations is below this value, it is considered the same sound source
+  time_limit: 1
+  pra: False
+  polar_pattern_coef: 1
+  add_to_mics_area: 6000
+  mics_center: [4, 4, 0]
+  time_frame: 1
+  in_3D: False
+  plot_circles: False
+  plot_map: False
+  plot_current_map: False
+  max_zero_dif_threshold: 0.013 #0.013 # this represents the percentage of the likelihood matrix size (closest to zero) that will be plotted
+  map_option: 0
+  classifier: False

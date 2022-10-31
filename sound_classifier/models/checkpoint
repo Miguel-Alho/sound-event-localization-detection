@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/miguel/sound_classification/src/MobileRobots/sound_tools/sound_classifier/models/model10_amp0.05_cough"
+all_model_checkpoint_paths: "/home/miguel/sound_classification/src/MobileRobots/sound_tools/sound_classifier/models/model10_amp0.05_cough"

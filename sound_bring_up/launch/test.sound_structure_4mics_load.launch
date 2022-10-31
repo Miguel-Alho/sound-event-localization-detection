@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="ns" default="amr"/>
+
+  <include file="$(find sound_bring_up)/launch/common.sound_structure.launch">
+    <arg name="ns" value="$(arg ns)" />
+    <arg name="config_file" value="global_2D_4mics"/>
+    <arg name="enable_generator" value="false"/>
+    <arg name="enable_receiver" value="false"/>
+    <arg name="enable_locator" value="true"/>
+    <!-- <arg name="enable_classifier" value="true"/> -->
+    <arg name="enable_spec" value="true"/>
+    <!-- <arg name="enable_rviz" value="true"/> -->
+  </include>
+
+  <include file="$(find sound_receiver)/launch/node.rosbag.launch">
+    <arg name="ns" value="$(arg ns)" />
+    <arg name="type" value="play"/>
+    <arg name="args" value="$(find sound_bring_up)/bag_files/4_mics_sala_A_speaker_(0,-2.2,0)/_2022-09-22-14-59-23.bag"/>
+  </include>
+
+</launch>

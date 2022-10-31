@@ -1,0 +1,116 @@
+sound_tools:
+  mics:
+    - id: 'mic1'
+      x: -0.4
+      y: -0.4
+      z: 0.4
+      rx: 0.0
+      ry: 0.0
+      rz: -0.9238795
+      rw: 0.3826834
+    - id: 'mic2'
+      x: -0.4
+      y: 0.4
+      z: 0.0
+      rx: 0.0
+      ry: 0.0
+      rz: 0.9238795
+      rw: 0.3826834
+    - id: 'mic3'
+      x: 0.4
+      y: 0.4
+      z: 0.4
+      rx: 0.0
+      ry: 0.0
+      rz: 0.3826834
+      rw: 0.9238795
+    - id: 'mic4'
+      x: 0.4
+      y: -0.4
+      z: 0.0
+      rx: 0.0
+      ry: 0.0
+      rz: -0.3826834
+      rw: 0.9238795
+  # sound_generator:
+  sound_sources:
+    - file: '100Hz.wav'
+      type: 'speaker'
+      x: 2
+      y: 0
+      z: 0
+    - file: '200Hz.wav'
+      type: 'speaker'
+      x: 2
+      y: -1
+      z: 1
+    - file: '300Hz.wav'
+      type: 'speaker'
+      x: 2
+      y: -2
+      z: 2
+    - file: '400Hz.wav'
+      type: 'speaker'
+      x: 1
+      y: -2
+      z: 1
+    - file: '500Hz.wav'
+      type: 'speaker'
+      x: 0
+      y: -2
+      z: 0
+    - file: '600Hz.wav'
+      type: 'speaker'
+      x: -1
+      y: -2
+      z: 1
+    - file: '700Hz.wav'
+      type: 'speaker'
+      x: -2
+      y: -2
+      z: 2
+    - file: '800Hz.wav'
+      type: 'speaker'
+      x: -2
+      y: -1
+      z: 1
+    - file: '900Hz.wav'
+      type: 'speaker'
+      x: -2
+      y: 0
+      z: 0
+    - file: '1000Hz.wav'
+      type: 'speaker'
+      x: -2
+      y: 1
+      z: 1
+    - file: '1100Hz.wav'
+      type: 'speaker'
+      x: -2
+      y: 2
+      z: 2
+    - file: '1200Hz.wav'
+      type: 'speaker'
+      x: -1
+      y: 2
+      z: 1
+    - file: '1300Hz.wav'
+      type: 'speaker'
+      x: 0
+      y: 2
+      z: 0
+    - file: '1400Hz.wav'
+      type: 'speaker'
+      x: 1
+      y: 2
+      z: 1
+    - file: '1500Hz.wav'
+      type: 'speaker'
+      x: 2
+      y: 2
+      z: 2
+    - file: '1600Hz.wav'
+      type: 'speaker'
+      x: 2
+      y: 1
+      z: 1

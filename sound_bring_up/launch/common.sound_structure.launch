@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- Arguments ================================================================ -->
+
+  <arg name="ns" />
+  
+  <arg name="config_file"/>
+  <arg name="enable_generator" default="false"/>
+  <arg name="enable_receiver" default="false"/>
+  <arg name="enable_locator" default="false"/>
+  <arg name="enable_classifier" default="false"/>
+  <arg name="enable_spec" default="false"/>
+  <arg name="enable_rviz" default="false"/>
+  <arg name="enable_saver" default="false"/>
+  <arg name="enable_loader" default="false"/>
+
+  <rosparam ns="$(arg ns)" command="load" file="$(find sound_bring_up)/config/common.yaml" />
+  <rosparam ns="$(arg ns)" command="load" file="$(find sound_bring_up)/config/$(arg config_file).yaml" />
+
+  <include if="$(arg enable_generator)" file="$(find sound_generator)/launch/node.sound_generator.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_receiver)" file="$(find sound_receiver)/launch/node.sound_receiver.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_locator)" file="$(find sound_locator)/launch/node.sound_locator.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_classifier)" file="$(find sound_classifier)/launch/node.sound_classifier.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_spec)" file="$(find sound_spec)/launch/node.sound_spec.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_saver)" file="$(find sound_saver)/launch/node.sound_saver.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <include if="$(arg enable_loader)" file="$(find sound_loader)/launch/node.sound_loader.launch">
+    <arg name="ns" value="$(arg ns)" />
+  </include>
+
+  <!-- Rviz ======================================================================-->
+  <node if="$(arg enable_rviz)" type="rviz" name="rviz" pkg="rviz" args="-d $(find sound_bring_up)/rviz/test.sound_structure.rviz" />
+
+</launch>
