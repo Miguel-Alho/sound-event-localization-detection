@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="ns"/>
+    
+  <node ns="$(arg ns)/sound_tools" name="sound_generator" type="sound_generator_node.py" pkg="sound_generator" output="screen">
+    <!-- <rosparam file="$(find kr_robots_planner)/config/trajectories_params.yaml" command="load" subst_value="true"/>
+    <param name="robot_description" value="/kr2_a1410/description" />
+    <param name="planning_group" value="arm_tool"/>
+    <param name="pose_reference_frame" value="kr2_a1410/base"/>
+    <param name="end_effector_link" value="kr2_a1410/gripper/magnet_link"/>
+    <param name="robot_velocity" value="0.25"/>
+    <param name="robot_acceleration" value="0.25"/>
+    <param name="position_goal_tolerance" value="0.01"/>
+    <remap from="move_group" to="/kr2_a1410/manipulator/move_group"/>
+    <remap from="planning_scene" to="/kr2_a1410/manipulator/planning_scene"/>
+    <remap from="get_planning_scene" to="/kr2_a1410/manipulator/get_planning_scene"/>
+    <remap from="apply_planning_scene" to="/kr2_a1410/manipulator/apply_planning_scene"/>
+    <remap from="global/planning_scene" to="/kr2_a1410/manipulator/global/planning_scene"/>
+    <remap from="pickup" to="/kr2_a1410/manipulator/pickup"/>
+    <remap from="place" to="/kr2_a1410/manipulator/place"/>
+    <remap from="trajectory_execution_event" to="/kr2_a1410/manipulator/trajectory_execution_event"/>
+    <remap from="attached_collision_object" to="/kr2_a1410/manipulator/attached_collision_object"/>
+    <remap from="execute_trajectory" to="/kr2_a1410/manipulator/execute_trajectory"/>
+    <remap from="joint_states" to="/kr2_a1410/control/joint_states" />
+    <remap from="compute_cartesian_path" to="/kr2_a1410/manipulator/compute_cartesian_path" /> -->
+    <!-- TODO Continue to remap topics and services as they are required -->
+  </node>
+
+</launch>
